@@ -2,7 +2,7 @@ __author__ = 'tejawork'
 
 from django.db import models
 from course import Course
-from users.users import Teacher
+from accounts.models.users import Teacher
 
 
 class Assignment(models.Model):
