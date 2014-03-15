@@ -1,0 +1,12 @@
+
+#Core frameworks
+django    				#core django libs
+
+#REST libraries
+django-tastypie 			  #REST framework
+django-oauth2-provider        #OAuth2 provider
+requests					  #HTTP client
+
+
+#DB
+mysql-python
