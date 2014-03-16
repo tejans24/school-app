@@ -1,0 +1,10 @@
+ENV/bin/pip install django
+ENV/bin/pip install django-tastypie
+ENV/bin/pip install django-oauth2-provider
+ENV/bin/pip install django-tastypie-swagger
+ENV/bin/pip install django-localflavor
+ENV/bin/pip install pyyaml
+ENV/bin/pip install requests
+ENV/bin/pip install dj_static
+sudo easy_install psycopg2
+ENV/bin/pip install psycopg2

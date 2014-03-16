@@ -1,5 +1,7 @@
 __author__ = 'tejawork'
 
-from users import Student
-from users import Teacher
+from guardian import Guardian
+from student import Student
+from phone import PhoneInfo
+from teacher import Teacher
 from users import UserProfile

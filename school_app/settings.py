@@ -37,9 +37,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'tastypie',
+    'tastypie_swagger',
     'provider',
     'provider.oauth2',
+    'localflavor',
     'accounts',
     'grades'
 )
@@ -57,13 +59,14 @@ ROOT_URLCONF = 'school_app.urls'
 
 WSGI_APPLICATION = 'school_app.wsgi.application'
 
+TASTYPIE_SWAGGER_API_MODULE = 'school_app.urls.v1_api'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', #'django.db.backends.sqlite3'  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'school_app', # Or path to database file if using sqlite3.
         'USER': 'root', # Not used with sqlite3.
         'PASSWORD': '', # Not used with sqlite3.
@@ -99,18 +102,6 @@ LOGGING = {
             'propagate': True,
         },
     }
-}
-
-REST_FRAMEWORK = {
-    # Use hyperlinked styles by default.
-    # Only used if the `serializer_class` attribute is not set on a view.
-    #'DEFAULT_MODEL_SERIALIZER_CLASS': 'rest_framework.serializers.HyperlinkedModelSerializer',
-
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
 }
 
 DEFAULT_AUTHENTICATION = {
