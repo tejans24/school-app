@@ -3,3 +3,5 @@ ENV
 *.log
 *.pot
 *.pyc
+*.project
+*.pydevproject
