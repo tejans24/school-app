@@ -6,10 +6,11 @@ dj_static
 
 
 #REST libraries
-django-tastypie 			  #REST framework
+djangorestframework 		  #REST framework
+markdown
+django-filter
 django-oauth2-provider        #OAuth2 provider
 requests					  #HTTP client
-django-tastypie-swagger       #REST docs library
 
 #DB
 mysql-python

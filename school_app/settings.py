@@ -37,8 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tastypie',
-    'tastypie_swagger',
+    'rest_framework',
     'provider',
     'provider.oauth2',
     'localflavor',
@@ -66,10 +65,10 @@ TASTYPIE_SWAGGER_API_MODULE = 'school_app.urls.v1_api'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', #'django.db.backends.sqlite3'  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.mysql', #'django.db.backends.sqlite3'  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'school_app', # Or path to database file if using sqlite3.
-        'USER': 'root', # Not used with sqlite3.
-        'PASSWORD': '', # Not used with sqlite3.
+        'USER': 'school_app', # Not used with sqlite3.
+        'PASSWORD': 'school_app', # Not used with sqlite3.
         'HOST': 'localhost', # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '', # Set to empty string for default. Not used with sqlite3.
     }

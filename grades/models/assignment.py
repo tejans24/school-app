@@ -9,7 +9,7 @@ class Assignment(models.Model):
     """ This task class represents assignments given to students """
 
     name = models.CharField(max_length=100)
-    course = models.ForeignKey(Course)
+    course = models.ForeignKey(Course, related_name='assignments')
     assignment_type = models.OneToOneField(AssignmentType)
     max_points = models.IntegerField()
     due_date = models.DateField()
